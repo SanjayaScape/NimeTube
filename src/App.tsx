@@ -1,5 +1,8 @@
 import {Routes, Route} from "react-router-dom"
-import Home from "./pages/home"
+import Home from "./pages/Home"
+import AnimeList from "./pages/AnimeList"
+import ReleaseLineup from "./pages/ReleaseLineup"
+import HotLeaks from "./pages/HotLeaks"
 import Navbar from "./component/Navbar"
 function App() {
   return (

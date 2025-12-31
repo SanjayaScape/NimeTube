@@ -1,7 +1,7 @@
 function Navbar () {
     return (
         <>
-        <nav>
+        <nav className="w-full bg-blue-500 p-6">
             <div className="brand">
                 <div className="logoBrand">
                     <img src="" alt="" />
