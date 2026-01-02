@@ -9,6 +9,5 @@ body {
     src: url(assets/PoorStory-Regular.ttf);
 }
 @theme {
-    --color-purpleN: rgba(162, 116, 241, 0.6);
-    --color-purpleO: rgba(162, 116, 241, 0.3);
+    --color-purpleN: rgba(96, 33, 210, 1);
 }
