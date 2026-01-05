@@ -2,8 +2,7 @@ import React from 'react'
 
 export default function Tube() {
   return (
-    <div className='flex flex-col items-center gap-2 justify-start w-full'>
-    <div className='w-full max-w-360 bg-[url(/friere.png)] bg-center bg-cover h-120 rounded-3xl border-2 border-purpleN'>
+    <div className='w-full bg-[url(/friere.png)] bg-center bg-cover h-120 rounded-3xl border-2 border-purpleN'>
         <div className="w-full h-full px-12 py-12 relative z-100 flex flex-row justify-start bg-linear-to-r from-black from-25% to-none rounded-3xl items-end">
             <div className="flex flex-col justify-end items-start gap-4">
                 <div className="flex flex-row items-center justify-start gap-4">
@@ -25,18 +24,9 @@ export default function Tube() {
                 </div>
             </div>
             <div className="flex flex-col items-center justify-center absolute z-50 right-8 bottom-8 bg-purpleN border-white/15 border p-4 rounded-full">
-                <img src="/playIcon.svg" alt="" />
+                <img src="/playIconW.svg" alt=""/>
             </div>
         </div>
-    </div>
-    <ul className='flex flex-row gap-1'>
-        <span className='bg-purpleN rounded-full w-6 h-2 border border-white/10'></span>
-        <span className='bg-purpleN/60 rounded-full w-2 h-2 border border-white/10'></span>
-        <span className='bg-purpleN/60 rounded-full w-2 h-2 border border-white/10'></span>
-        <span className='bg-purpleN/60 rounded-full w-2 h-2 border border-white/10'></span>
-        <span className='bg-purpleN/60 rounded-full w-2 h-2 border border-white/10'></span>
-        <span className='bg-purpleN/60 rounded-full w-2 h-2 border border-white/10'></span>
-    </ul>
     </div>
   )
 }
