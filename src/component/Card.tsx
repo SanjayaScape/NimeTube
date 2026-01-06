@@ -4,7 +4,7 @@ import { useState } from 'react'
 export default function Card() {
     const [vHover , setvHover] = useState(false)
   return (
-    <div className='flex flex-col items-center justify-end w-full max-w-[calc(20%-calc(48px/5))] min-h-80 border border-purpleN rounded-md relative z-80 bg-[url(/frieren.png)] bg-cover bg-center overflow-hidden'>
+    <div className={`flex flex-col items-center justify-end w-full max-w-[calc(20%-calc(48px/5))] min-h-80 border border-purpleN rounded-md relative z-80 bg-[url(/frieren.png)] bg-cover ${vHover ? "scale-[102%]" : "scale-none"} bg-center overflow-hidden`}>
         <div className={`absolute w-full h-full rounded-md flex flex-col items-center justify-center overflow-hidden z-50 gap-2 ${vHover ? "bg-black/60" : "bg-black/0"}`} onMouseEnter={() => setvHover(true)} onMouseLeave={() => setvHover(false)}>
             <div className={`flex w-24 h-24 rounded-md border border-purpleN/60 bg-[url(/frieren.png)] bg-cover bg-center relative items-center justify-center z-40 ${vHover ? "flex" : "hidden"}`}>
                 <div className="w-6 h-6 absolute z-30">
