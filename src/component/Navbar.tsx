@@ -6,7 +6,7 @@ export default function Navbar () {
         <nav className="w-full flex flex-row bg-black items-center justify-center fixed top-0 z-1000" >
             <div className="w-full flex flex-row py-6 px-16 items-center justify-start gap-8 max-w-390 border-b-[0.5px] border-purpleN/15">
                 <div className="flex flex-row items-center justify-center">
-                    <Link to="/"><img src="/Brand.svg" alt="NimeTube" className="w-[128px] h-auto"/></Link>
+                    <Link to="/"><img src="/Brand.svg" alt="NimeTube" className="w-32 h-auto"/></Link>
                 </div>
                 <div className="flex flex-row items-center justify-start flex-1 bg-purpleN/5 border border-purpleN rounded-md px-3 py-1.5">
                     <div className="w-4">
