@@ -3,6 +3,7 @@ import Tube from '../component/Tube'
 import Card from '../component/Card'
 import Footer from '../component/Footer'
 import SubTitle from '../component/SubTitle'
+import ButtonMore from '../component/ButtonMore'
 export default function Home() {
   return (
     <div className='flex flex-col justify-start items-center'>
@@ -22,12 +23,7 @@ export default function Home() {
             <Card></Card>
             <Card></Card>
           </div>
-          <div className="bg-purpleN/60 border border-purpleN rounded-md px-4 py-1 self-end flex flex-row items-center justify-start gap-4">
-            <p className='text-base'>View more</p>
-            <div className="w-4 h-4">
-              <img src="/moreIcon.svg" alt="" />
-            </div>
-          </div>
+          <ButtonMore></ButtonMore>
         </div>
         <div className='flex flex-col items-center justfy-start gap-6 w-full max-w-360'>
           <SubTitle title="This Season's Anime" num={32} ></SubTitle>
@@ -43,12 +39,7 @@ export default function Home() {
             <Card></Card>
             <Card></Card>
           </div>
-          <div className="bg-purpleN/60 border border-purpleN rounded-md px-4 py-1 self-end flex flex-row items-center justify-start gap-4">
-            <p className='text-base'>View more</p>
-            <div className="w-4 h-4">
-              <img src="/moreIcon.svg" alt="" />
-            </div>
-          </div>
+          <ButtonMore></ButtonMore>
         </div>
       </div>
       <Footer></Footer>
