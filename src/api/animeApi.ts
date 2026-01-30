@@ -1,7 +1,7 @@
 export interface Anime {
     mal_id: number
     title: string
-    episode: number | null
+    episodes: number 
     images: {
         jpg: {
             image_url:string
