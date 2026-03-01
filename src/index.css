@@ -6,7 +6,7 @@ body {
 }
 @font-face {
     font-family: ps;
-    src: url(assets/PoorStory-Regular.ttf);
+    src: url(assets/PixelifySans-VariableFont_wght.ttf);
 }
 @theme {
     --color-purpleN: rgba(96, 33, 210, 1);

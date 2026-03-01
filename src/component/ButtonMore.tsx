@@ -1,7 +1,7 @@
 import React from 'react'
 import { useState } from 'react'
 export default function ButtonMore() {
-    const [isHov , setisHov] = useState(false);
+    const [isHov , setisHov] = useState(false)
   return (
     <div className="flex flex-row items-center justify-start p-1 rounded-md border-white/30 border self-end" onMouseEnter={() => setisHov(true)} onMouseLeave={() => setisHov(false)}>
         <div className={`flex flex-row items-center justify-start ${isHov ? "gap-0" : "gap-3"} transition-all rounded-sm overflow-hidden relative`}>
