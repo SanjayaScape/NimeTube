@@ -10,7 +10,7 @@ export default function Navbar () {
                 <NavLink></NavLink>
                 <div className="flex flex-row items-center justify-start flex-1 bg-purpleN/5 border border-purpleN rounded-md px-3 py-1.5">
                     <div className="w-4">
-                        <img src="/searchIcon.png" alt="" />
+                        <img src="/searchIcon.svg" alt="" />
                     </div>
                     <input type="text" placeholder="Search your series here..." className="w-full pl-3 outline-0 bg-none"/>
                 </div>

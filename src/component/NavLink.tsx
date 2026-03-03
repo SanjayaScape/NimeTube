@@ -6,10 +6,11 @@ export default function NavLink() {
     const [isClick , setisClick] = useState(false);
   return (
     <div className="cursor-pointer flex flex-col items-start justify-start relative z-20" onClick={() => isClick ? setisClick(false) : setisClick(true) }>
-        <div className="flex flex-row items-center justify-start gap-3">
+        <div className="flex flex-row items-center justify-start gap-4">
             <p className={`text-lg ${isClick ? "opacity-100" : "opacity-70"}`}>Features</p>
-            <div className="w-3.5">
-                <img src="/v-Block" alt="" />
+            <div className={`transition-all duration-200 ease ${isClick ? "rotate-315" : "rotate-225"}`}>
+                <img className={`transition-all duration-200 ease w-3.5 h-3.5 ${isClick ? "hidden" : "flex"}`} src="/v_Block.svg" alt="" />
+                <img className={`transition-all duration-200 ease w-4.5 h-4.5 rotate-45 ${isClick ? "flex" : "hidden"}`} src="/v_Full.svg" alt="" />
             </div>
         </div>
         <div className={`p-3 rounded-md border-purpleN border absolute top-12 bg-black/90 ${isClick ? "flex" : "hidden"} flex-col gap-1 w-64`}>

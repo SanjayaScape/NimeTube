@@ -4,9 +4,9 @@ export default function Brand() {
   return (
     <div className='flex justify-start items-center flex-row gap-3'>
         <div className="flex">
-            <img src="/Brand.svg" alt="" className='w-14'/>
+            <img src="/Brand.svg" alt="" className='w-11'/>
         </div>
-        <p className='text-2xl'>NimeTube</p>
+        <p className='text-xl'>NimeTube</p>
     </div>
   )
 }
