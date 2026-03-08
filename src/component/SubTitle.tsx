@@ -1,7 +1,7 @@
 import React from 'react'
 
-type listProps = {
-  title : string ,
+interface listProps {
+  title : string 
   num : number
 }
 

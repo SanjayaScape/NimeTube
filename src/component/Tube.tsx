@@ -1,5 +1,7 @@
 import React from 'react'
 import { useState } from 'react'
+import ButtonMore from './ButtonMore';
+
 export default function Tube() {
     const [isHov , setisHov] = useState(false);
   return (
@@ -25,9 +27,8 @@ export default function Tube() {
                         </div>
                     </div>
                 </div>
-                <div className={`flex flex-col items-center justify-center absolute z-50 right-8 bottom-8 bg-purpleN border-white/15 border p-4 rounded-md`} onMouseEnter={() => setisHov(true)} onMouseLeave={() => setisHov(false)}>
-                    <img className={`tranlate w-6 h-6 ${isHov ? "hidden" : "flex"}`} src="/separate_button.svg" alt=""/>
-                    <img className={`w-6 h-6 ${isHov ? "flex" : "hidden"}`} src="/full_button.svg" alt=""/>
+                <div className={`flex absolute z-50 right-8 bottom-8 bg-black/60 rounded-md`} onMouseEnter={() => setisHov(true)} onMouseLeave={() => setisHov(false)}>
+                <ButtonMore text='Watch now'></ButtonMore>
                 </div>
             </div>
         </div>

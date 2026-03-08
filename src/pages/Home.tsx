@@ -14,7 +14,7 @@ export default function Home() {
 
   useEffect(() => {
     async function topAnime () {
-      const res = await axios.get("https://api.jikan.moe/v4/top/anime?limit=20")
+      const res = await axios.get("https://api.jikan.moe/v4/seasons/now?limit=20")
       setAnime(res.data.data)
       setTotal(res.data.pagination.items.total)
     }
