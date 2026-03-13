@@ -6,7 +6,7 @@ export default function Brand() {
     <Link to={''}>
     <div className='flex justify-start items-center flex-row gap-3'>
         <div className="flex">
-            <img src="/Brand.svg" alt="" className='w-11'/>
+            <img src="/Brand.svg" alt="" className='w-11 min-w-11'/>
         </div>
         <p className='text-xl'>NimeTube</p>
     </div>
