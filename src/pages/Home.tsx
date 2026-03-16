@@ -13,12 +13,12 @@ export default function Home() {
   const [total , setTotal] = useState(0)
 
   useEffect(() => {
-    async function topAnime () {
+    async function seaAnime () {
       const res = await axios.get("https://api.jikan.moe/v4/seasons/now?limit=20")
       setAnime(res.data.data)
       setTotal(res.data.pagination.items.total)
     }
-    topAnime()
+    seaAnime()
   }, [])
   return (
     <div className='flex flex-col justify-start items-center'>
