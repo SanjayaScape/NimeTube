@@ -21,25 +21,25 @@ export default function GenreTube() {
 
   useEffect (() => {
     async function getNimeRom () {
-      if (iClick == 1 && nimeFan != []) {
+      if (iClick == 1 && nimeFan.length == 0) {
         const resFan = await axios.get("https://api.jikan.moe/v4/anime?genres=10&limit=4")
         setnimeFan(resFan.data.data)
-      } else if (iClick == 2 && nimeRom != []){
+      } else if (iClick == 2 && nimeRom.length == 0){
         const resRom = await axios.get("https://api.jikan.moe/v4/anime?genres=22&limit=4")
         setnimeRom(resRom.data.data)
-      } else if (iClick == 3 && nimeCom != []) {
+      } else if (iClick == 3 && nimeCom.length == 0) {
         const resCon = await axios.get("https://api.jikan.moe/v4/anime?genres=4&limit=4")
         setnimeCom(resCon.data.data)
       }
     }
     getNimeRom()
-  },[])
+  },[iClick])
   return (
     <div className={`flex flex-row justify-start items-center w-full border-purpleN/70 border rounded-lg`}>
       <div className={`flex flex-row justify-start items-start transition-all duration-250 rounded-lg border overflow-hidden border-purpleN border-r ${iClick == 1 ? " min-w-[45%] max-w-[45%] w-[45%]" : "min-w-[27.5%] max-w-[27.5%] w-[27.5%]"} bg-[url(/frieren.png)] bg-cover bg-center`} onClick={() => setiClick(1)}>
       <div className={`flex flex-col items-start justify-between w-full transition-all duration-150 ${iClick == 1 ? "bg-black/50" : "bg-black/90"} rounded-lg py-10 px-8 h-120`}>
         <div className="flex flex-col gap-4 items-start justify-start w-full">
-          <p className={`${iClick == 1 ? "opacity-100 text-7xl" : "opacity-80 text-5xl "}`}>ISEKAI</p>
+          <p className={`transition-all duration-250 ${iClick == 1 ? "opacity-100 text-7xl" : "opacity-80 text-5xl "}`}>ISEKAI</p>
           <div className={`flex-row items-end justify-start w-full gap-2.5 ${iClick == 1 ? "flex" : "hidden"}`}>
             {nimeFan.map((nf) => (
               <div className={`flex w-16 h-16 rounded-md border border-purpleN/60 bg-cover bg-center items-center justify-center ${iHover == nf.mal_id ? "scale-120" : "scale-100"}`}
@@ -61,7 +61,7 @@ export default function GenreTube() {
       <div className={`flex flex-row justify-start items-start transition-all duration-250 rounded-lg border overflow-hidden border-purpleN border-r ${iClick == 2 ? " min-w-[45%] max-w-[45%] w-[45%]" : "min-w-[27.5%] max-w-[27.5%] w-[27.5%]"} bg-[url(/liw.png)] bg-cover bg-center`} onClick={() => setiClick(2)}>
       <div className={`flex flex-col items-start justify-between w-full transition-all duration-150 ${iClick == 2 ? "bg-black/50" : "bg-black/90"} rounded-lg py-10 px-8 h-120`}>
         <div className="flex flex-col gap-4 items-start justify-start w-full">
-          <p className={`${iClick == 2 ? "opacity-100 text-7xl" : "opacity-80 text-5xl"}`}>ROMANCE</p>
+          <p className={`${iClick == 2 ? "opacity-100 text-7xl" : "opacity-80 text-5xl"} transition-all duration-250`}>ROMANCE</p>
           <div className={`flex-row items-end justify-start w-full gap-2.5 ${iClick == 2 ? "flex" : "hidden"}`}>
             {nimeRom.map((nr) => (
               <div className={`flex w-16 h-16 rounded-md border border-purpleN/60 bg-cover bg-center items-center justify-center ${iHover == nr.mal_id ? "scale-120" : "scale-100"}`}
@@ -83,7 +83,7 @@ export default function GenreTube() {
       <div className={`flex flex-row justify-start items-start transition-all duration-250 rounded-lg border overflow-hidden border-purpleN border-r ${iClick == 3 ? " min-w-[45%] max-w-[45%] w-[45%]" : "min-w-[27.5%] max-w-[27.5%] w-[27.5%]"} bg-[url(/cid.png)] bg-cover bg-center`} onClick={() => setiClick(3)}>
       <div className={`flex flex-col items-start justify-between w-full transition-all duration-150 ${iClick == 3 ? "bg-black/50" : "bg-black/90"} rounded-lg py-10 px-8 h-120`}>
         <div className="flex flex-col gap-4 items-start justify-start w-full">
-          <p className={`${iClick == 3 ? "opacity-100 text-7xl" : "opacity-80 text-5xl"}`}>COMEDY</p>
+          <p className={`${iClick == 3 ? "opacity-100 text-7xl" : "opacity-80 text-5xl"} transition-all duration-250`}>COMEDY</p>
           <div className={`flex-row items-end justify-start w-full gap-2.5 ${iClick == 3 ? "flex" : "hidden"}`}>
             {nimeCom.map((nc) => (
               <div className={`flex w-16 h-16 rounded-md border border-purpleN/60 bg-cover bg-center items-center justify-center ${iHover == nc.mal_id ? "scale-120" : "scale-100"}`}
