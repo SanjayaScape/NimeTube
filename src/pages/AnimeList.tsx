@@ -25,7 +25,7 @@ export default function AnimeList() {
       let t = "Anime"
       if (genre == 0 && year == 0) {
         url = `https://api.jikan.moe/v4/top/anime?page=${page}&`
-        
+        t = "Top Anime"
       } else {
         if (genre){
           url += `genres=${genre}&`

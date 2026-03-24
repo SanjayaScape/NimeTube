@@ -4,6 +4,9 @@ body {
     color: white;
     font-family: ps;
 }
+.nScrollbar::-webkit-scrollbar {
+  display: none;
+}
 @font-face {
     font-family: ps;
     src: url(assets/PixelifySans-VariableFont_wght.ttf);
