@@ -36,7 +36,7 @@ export default function AnimeList() {
           t += ` / ${year}`
         } 
       }
-      const res =await axios.get(url)
+      const res = await axios.get(url)
       setaniList(res.data.data)
       setanimeTot(res.data.pagination.items.total)
       settext(t)
@@ -51,7 +51,7 @@ export default function AnimeList() {
         <SubTitle title={text} num={animeTot}></SubTitle>
         <div className='flex flex-row w-full items-center justify-end gap-4'>
           <FilterGenre setG={setgenre} setTG={settextG} setFO={setfilOpen} FO={filOpen}></FilterGenre>
-          <FilterDate setY={setyear}  setFO={setfilOpen} FO={"Date"}></FilterDate>
+          <FilterDate setY={setyear}  setFO={setfilOpen} FO={filOpen}></FilterDate>
         </div>
         <div className="flex flex-row items-center justify-start gap-3 w-full flex-wrap">
           {aniList.map(ani => (

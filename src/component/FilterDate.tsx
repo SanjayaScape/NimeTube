@@ -17,8 +17,9 @@ export default function FilterDate({setY , setFO , FO} : setP) {
     for (let i = year; i >= 2000; i--) {
         years.push(i)
     }
+
   return (
-    <div className={`flex flex-col items-start justify-start relative z-81 w-42 ${FO == "Date" || iHover ? "bg-purpleN/20 border-white/40" : "bg-purpleN/5 border-white/15"} rounded-md border `} onMouseEnter={() => {setiHover(true)}} onMouseLeave={() => {setiHover(false)}} onClick={ () => FO == "Date" ? ( setFO(""), console.log("a")): ( setFO("Date"), console.log("b"))}>
+    <div className={`flex flex-col items-start justify-start relative z-81 w-42 ${FO == "Date" || iHover ? "bg-purpleN/20 border-white/40" : "bg-purpleN/5 border-white/15"} rounded-md border `} onMouseEnter={() => {setiHover(true)}} onMouseLeave={() => {setiHover(false)}} onClick={ () => FO == "Date" ? ( setFO("")): ( setFO("Date"))}>
             <div className="flex flex-row items-center justify-between px-4 py-3 w-full">
                 <p className={`text-base ${iHover || FO == "Date" ? "opacity-100" : "opacity-70"}`}>{isClickD}</p>
                 <div className={`flex items-center justify-center transition-all duration-200 ease ${ FO == "Date" ? "rotate-315" : "rotate-225"}`}>
